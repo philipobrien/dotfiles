@@ -19,3 +19,9 @@
 [submodule "vim/vim.symlink/bundle/tcomment"]
 	path = vim/vim.symlink/bundle/tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "vim/vim.symlink/bundle/spacegray"]
+	path = vim/vim.symlink/bundle/spacegray
+	url = https://github.com/ajh17/Spacegray.vim.git
+[submodule "vim/vim.symlink/bundle/nerdtree"]
+	path = vim/vim.symlink/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
