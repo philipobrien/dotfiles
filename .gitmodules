@@ -13,3 +13,6 @@
 [submodule "vim/vim.symlink/bundle/vim-monokai"]
 	path = vim/vim.symlink/bundle/vim-monokai
 	url = https://github.com/sickill/vim-monokai.git
+[submodule "vim/vim.symlink/bundle/bundle/tcomment"]
+	path = vim/vim.symlink/bundle/bundle/tcomment
+	url = https://github.com/tomtom/tcomment_vim.git
