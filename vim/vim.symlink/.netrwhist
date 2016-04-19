@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/philip/work/smart appi/scripts/one-doc-to-many'
 let g:netrw_dirhist_2='/Users/philip/work/smart-appi/code/lib'
+let g:netrw_dirhist_3='/Users/philip/study/ruby/koans'

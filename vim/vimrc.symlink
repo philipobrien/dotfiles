@@ -19,3 +19,4 @@ let g:syntastic_java_checkers=['']
 set laststatus=2
 set ttimeoutlen=50
 set noshowmode 
+autocmd vimenter * NERDTree
