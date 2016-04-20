@@ -4,4 +4,4 @@ $ source bootstrap.sh
 $ cd vim
 $ git submodule update --init
 
-test
+test2
