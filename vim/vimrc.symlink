@@ -20,3 +20,4 @@ set laststatus=2
 set ttimeoutlen=50
 set noshowmode 
 autocmd vimenter * NERDTree
+au BufRead,BufNewFile *.md set filetype=markdown
