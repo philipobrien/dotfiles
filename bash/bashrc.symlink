@@ -36,14 +36,3 @@ export NVM_DIR="/usr/local/opt/nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-
-if [[ $USER == "philip" ]];
-  then 
-    echo 'philip'
-  else
-    echo $USER
-fi 
-
-
-
