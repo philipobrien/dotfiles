@@ -29,7 +29,6 @@ export PATH=$PATH:$SPARK_HOME/bin
 
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\e[0;34m\]\u\[\e[m\] \[\e[0;31m\]\W\[\e[m\]\[\e[0;32m\] \[\e[0;36m\]$(__git_ps1 "[%s] ")\[\e[0;35m\]\$ \[\e[0m\]'
-# export PS1='\[\e[0;34m\]philip\[\e[m\] \[\e[0;31m\]\W\[\e[m\]\[\e[0;32m\] \[\e[0;36m\]$(__git_ps1 "[%s] ")\[\e[0;35m\]\$ \[\e[0m\]'
 export PATH=/usr/local/sbin:$PATH
 
 export NVM_DIR="/usr/local/opt/nvm"
