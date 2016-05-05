@@ -19,5 +19,5 @@ let g:syntastic_java_checkers=['']
 set laststatus=2
 set ttimeoutlen=50
 set noshowmode 
-autocmd vimenter * NERDTree
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 au BufRead,BufNewFile *.md set filetype=markdown
