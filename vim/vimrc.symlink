@@ -10,7 +10,6 @@ set number
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-" set laststatus=2
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -18,6 +17,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_java_checkers=['']
 set laststatus=2
 set ttimeoutlen=50
-set noshowmode 
+" set noshowmode 
 autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 au BufRead,BufNewFile *.md set filetype=markdown
+let g:airline_powerline_fonts = 1
