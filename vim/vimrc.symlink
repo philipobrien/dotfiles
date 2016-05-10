@@ -21,3 +21,5 @@ set ttimeoutlen=50
 autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 au BufRead,BufNewFile *.md set filetype=markdown
 let g:airline_powerline_fonts = 1
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
