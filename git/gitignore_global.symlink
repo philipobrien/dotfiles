@@ -52,3 +52,7 @@ bower_components
 # IDE data #
 ################
 .idea
+
+# Python #
+#############
+*.pyc
