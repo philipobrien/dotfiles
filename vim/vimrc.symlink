@@ -23,3 +23,4 @@ au BufRead,BufNewFile *.md set filetype=markdown
 let g:airline_powerline_fonts = 1
 let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
+let NERDTreeIgnore = ['\.pyc$']
