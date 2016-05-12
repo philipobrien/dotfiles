@@ -22,8 +22,9 @@ export PHANTOMJS_HOME=/usr/local/share/phantomjs
 export PATH=$PATH:$PHANTOMJS_HOME
 
 # export HADOOP_CONF_DIR=/usr/local/Cellar/hadoop/2.7.1/libexec/etc/hadoop
-alias pyspark="IPYTHON=1 IPYTHON_OPTS=\"--pylab\" ./bin/pyspark"
+#alias pyspark="IPYTHON=1 IPYTHON_OPTS=\"--pylab\" ./bin/pyspark"
 export SPARK_HOME=/usr/local/share/spark-1.5.2-bin-hadoop2.6
+export PYSPARK_DRIVER_PYTHON=ipython
 export PATH=$PATH:$SPARK_HOME/bin 
 [[ -s "$HOME/.git-prompt.sh" ]] && source "$HOME/.git-prompt.sh"
 
