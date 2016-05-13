@@ -1,3 +1,5 @@
+# Generic Aliases #
+###################
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -6,33 +8,47 @@ alias rmd="rm -rf"
 alias pg="ps aux | grep"
 alias la="ls -la"
 
+# Prompt Customisation #
+########################
+[[ -s "$HOME/.git-prompt.sh" ]] && source "$HOME/.git-prompt.sh"
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\[\e[0;34m\]\u\[\e[m\] \[\e[0;31m\]\W\[\e[m\]\[\e[0;32m\] \[\e[0;36m\]$(__git_ps1 "[%s] ")\[\e[0;35m\]\$ \[\e[0m\]'
+if [[ $USER == "ubuntu" ]];
+    then
+        export PS1='\[\e[1;33m\]VM \[\e[0;34m\]\u\[\e[m\] \[\e[0;31m\]\W\[\e[m\]\[\e[0;32m\] \[\e[0;36m\]$(__git_ps1 "[%s] ")\[\e[0;35m\]\$ \[\e[0m\]'
+fi
+
+# OSX Specific #
+################
 alias hstart="/usr/local/Cellar/hadoop/2.7.1/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.1/sbin/start-yarn.sh"
 alias hstop="/usr/local/Cellar/hadoop/2.7.1/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.1/sbin/stop-dfs.sh"
-
 alias jenkinsstart="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist"
 alias jenkinsstop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist"
 
+
+######## Various exports #########
+# comment/uncomment as necessary #
+##################################
 export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
 # export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
 # export JAVA8_HOME="$(/usr/libexec/java_home -v 1.8)"
-# export PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/bin:$PATH
-export SCALA_HOME=/usr/local/bin/scala  
+
+export SCALA_HOME=/usr/local/bin/scala
 export PATH=$PATH:$SCALA_HOME/bin
 export PHANTOMJS_HOME=/usr/local/share/phantomjs
 export PATH=$PATH:$PHANTOMJS_HOME
 
 # export HADOOP_CONF_DIR=/usr/local/Cellar/hadoop/2.7.1/libexec/etc/hadoop
-#alias pyspark="IPYTHON=1 IPYTHON_OPTS=\"--pylab\" ./bin/pyspark"
 export SPARK_HOME=/usr/local/share/spark-1.5.2-bin-hadoop2.6
+# export SPARK_HOME="/usr/local/spark-1.6.1-bin-hadoop2.6"
 export PYSPARK_DRIVER_PYTHON=ipython
-export PATH=$PATH:$SPARK_HOME/bin 
-[[ -s "$HOME/.git-prompt.sh" ]] && source "$HOME/.git-prompt.sh"
-
-GIT_PS1_SHOWDIRTYSTATE=true
-export PS1='\[\e[0;34m\]\u\[\e[m\] \[\e[0;31m\]\W\[\e[m\]\[\e[0;32m\] \[\e[0;36m\]$(__git_ps1 "[%s] ")\[\e[0;35m\]\$ \[\e[0m\]'
+export PATH=$PATH:$SPARK_HOME/bin
 export PATH=/usr/local/sbin:$PATH
 
+# export PATH="/home/ubuntu/anaconda2/bin:$PATH"
+
 export NVM_DIR="/usr/local/opt/nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
