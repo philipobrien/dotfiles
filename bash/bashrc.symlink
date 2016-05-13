@@ -46,7 +46,7 @@ export PYSPARK_DRIVER_PYTHON=ipython
 export PATH=$PATH:$SPARK_HOME/bin
 export PATH=/usr/local/sbin:$PATH
 
-# export PATH="/home/ubuntu/anaconda2/bin:$PATH"
+# export PATH="/usr/local/anaconda/bin:$PATH"
 
 export NVM_DIR="/usr/local/opt/nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"
