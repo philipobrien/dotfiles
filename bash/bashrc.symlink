@@ -19,10 +19,15 @@ if [[ $USER == "ubuntu" ]];
 fi
 
 export HISTTIMEFORMAT="%d/%m/%y %T "
-export HISTCONTROL=ignoredups:erasedups  
-shopt -s histappend  
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"  
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+# export HISTCONTROL=ignoredups:erasedups  
+# shopt -s histappend  
+# export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"  
+#
 # OSX Specific #
 ################
 alias hstart="/usr/local/Cellar/hadoop/2.7.1/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.1/sbin/start-yarn.sh"
@@ -45,7 +50,7 @@ export PHANTOMJS_HOME=/usr/local/share/phantomjs
 export PATH=$PATH:$PHANTOMJS_HOME
 
 # export HADOOP_CONF_DIR=/usr/local/Cellar/hadoop/2.7.1/libexec/etc/hadoop
-export SPARK_HOME=/usr/local/share/spark-1.5.2-bin-hadoop2.6
+export SPARK_HOME=/usr/local/share/spark-2.0.0-bin-hadoop2.6
 # export SPARK_HOME="/usr/local/spark-1.6.1-bin-hadoop2.6"
 export PYSPARK_DRIVER_PYTHON=ipython
 export PATH=$PATH:$SPARK_HOME/bin
