@@ -11,5 +11,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-# export JAVA_HOME=$(/usr/libexec/java_home)
 export TERM=xterm-256color
+export JAVA_HOME=$(/usr/libexec/java_home)
+export SPARK_HOME=/usr/local/share/spark-2.0.0-bin-hadoop2.6
+export PYSPARK_DRIVER_PYTHON=ipython
+export PATH=$PATH:$SPARK_HOME/bin
+export PATH=/usr/local/sbin:$PATH
+export PATH=$PATH:$HOME/anaconda/bin
+conda config --set changeps1 false
+
+export NVM_DIR="/usr/local/opt/nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$PATH:$HOME/.rvm/bin"
