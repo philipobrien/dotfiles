@@ -59,3 +59,4 @@ bower_components
 *.pyc
 .coverage
 *.h5
+*.ipynb_checkpoints
