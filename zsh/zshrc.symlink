@@ -19,6 +19,10 @@ export PATH=$PATH:$SPARK_HOME/bin
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/anaconda/bin
 conda config --set changeps1 false
+export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+export DYLD_LIBRARY_PATH=/usr/local/share/cuda/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 
 export NVM_DIR="/usr/local/opt/nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"
@@ -26,5 +30,6 @@ export NVM_DIR="/usr/local/opt/nvm"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 alias notebook="jupyter notebook"
-
-. /usr/local/share/torch/install/bin/torch-activate
+unalias rm
+# sudo ln -sf /usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcuda.1.dylib
+# . /usr/local/share/torch/install/bin/torch-activate
