@@ -49,6 +49,6 @@
 [submodule "vim/vim.symlink/bundle/ctrlp"]
 	path = vim/vim.symlink/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vim/vim.symlink/bundle/material-theme"]
+[submodule "vim/vim.symlink/bundle/vim-material-theme"]
 	path = vim/vim.symlink/bundle/vim-material-theme
 	url = https://github.com/jdkanani/vim-material-theme.git
